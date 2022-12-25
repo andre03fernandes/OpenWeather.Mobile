@@ -21,9 +21,26 @@ namespace OpenWeather.Web.Controllers
         public IActionResult Index()
         {
             return View();
-        }
+        }                       
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+
+        [Route("error/404")]
+        public IActionResult Error404()
         {
             return View();
         }

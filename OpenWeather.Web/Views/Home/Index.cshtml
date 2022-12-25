@@ -1,227 +1,217 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<link href="~/css/style.css" rel="stylesheet" />
-<div class="site-content">
-    <div class="hero" data-bg-image="images/banner.png">
-        <div class="container">
-            <form action="#" class="find-location">
-                <input type="text" placeholder="Find your location...">
-                <input type="submit" value="Find">
-            </form>
 
-        </div>
-    </div>
-    <div class="forecast-table">
-        <div class="container">
-            <div class="forecast-container">
-                <div class="today forecast">
-                    <div class="forecast-header">
-                        <div class="day">Monday</div>
-                        <div class="date">6 Oct</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="location">New York</div>
-                        <div class="degree">
-                            <div class="num">23<sup>o</sup>C</div>
-                            <div class="forecast-icon">
-                                <img src="images/icons/icon-1.svg" alt="" width=90>
-                            </div>
-                        </div>
-                        <span><img src="images/icon-umberella.png" alt="">20%</span>
-                        <span><img src="images/icon-wind.png" alt="">18km/h</span>
-                        <span><img src="images/icon-compass.png" alt="">East</span>
-                    </div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                <h2 data-aos="fade-up">OpenWeather</h2>
+                <blockquote data-aos="fade-up" data-aos-delay="100">
+                    <p>Weather forecasts, nowcasts and history in a fast and elegant way</p>
+                </blockquote>
+                <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#about" class="btn-get-started">Get Started</a>
+                    <a href="https://www.youtube.com/watch?v=G_H3j8EZCvs" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
                 </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Tuesday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-3.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Wednesday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-5.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Thursday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-7.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Friday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-12.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Saturday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-13.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
-                <div class="forecast">
-                    <div class="forecast-header">
-                        <div class="day">Sunday</div>
-                    </div> <!-- .forecast-header -->
-                    <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="images/icons/icon-14.svg" alt="" width=48>
-                        </div>
-                        <div class="degree">23<sup>o</sup>C</div>
-                        <small>18<sup>o</sup></small>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
-    <main class="main-content">
-        <div class="fullwidth-block">
-            <div class="container">
-                <h2 class="section-title">Live cameras</h2>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="live-camera">
-                            <figure class="live-camera-cover"><img src="images/live-camera-1.jpg" alt=""></figure>
-                            <h3 class="location">New York</h3>
-                            <small class="date">8 oct, 8:00AM</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="live-camera">
-                            <figure class="live-camera-cover"><img src="images/live-camera-2.jpg" alt=""></figure>
-                            <h3 class="location">Los Angeles</h3>
-                            <small class="date">8 oct, 8:00AM</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="live-camera">
-                            <figure class="live-camera-cover"><img src="images/live-camera-3.jpg" alt=""></figure>
-                            <h3 class="location">Chicago</h3>
-                            <small class="date">8 oct, 8:00AM</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="live-camera">
-                            <figure class="live-camera-cover"><img src="images/live-camera-4.jpg" alt=""></figure>
-                            <h3 class="location">London</h3>
-                            <small class="date">8 oct, 8:00AM</small>
-                        </div>
+</section>
+<!-- End Hero Section -->
+<!-- ======= Main Section ======= -->
+<main id="main">
+    <!-- ======= Our Services Section ======= -->
+    <section id="services-list" class="services-list">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Our Services</h2>
+
+            </div>
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon flex-shrink-0"><i class="bi bi-briefcase" style="color: #f57813;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                     </div>
                 </div>
-            </div>
-        </div>
+                <!-- End Service Item -->
 
-        <div class="fullwidth-block" data-bg-color="#262936">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="news">
-                            <div class="date">06.10</div>
-                            <h3><a href="#">Doloremque laudantium totam sequi </a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe assumenda dolorem modi, expedita voluptatum ducimus necessitatibus. Asperiores quod reprehenderit necessitatibus harum, mollitia, odit et consequatur maxime nisi amet doloremque.</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon flex-shrink-0"><i class="bi bi-card-checklist" style="color: #15a04a;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
+                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="news">
-                            <div class="date">06.10</div>
-                            <h3><a href="#">Doloremque laudantium totam sequi </a></h3>
-                            <p>Nobis architecto consequatur ab, ea, eum autem aperiam accusantium placeat vitae facere explicabo temporibus minus distinctio cum optio quis, dignissimos eius aspernatur fuga. Praesentium totam, corrupti beatae amet expedita veritatis.</p>
-                        </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon flex-shrink-0"><i class="bi bi-bar-chart" style="color: #d90769;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="news">
-                            <div class="date">06.10</div>
-                            <h3><a href="#">Doloremque laudantium totam sequi </a></h3>
-                            <p>Enim impedit officiis placeat qui recusandae doloremque possimus, iusto blanditiis, quam optio delectus maiores. Possimus rerum, velit cum natus eos. Cumque pariatur beatae asperiores, esse libero quas ad dolorem. Voluptates.</p>
-                        </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon flex-shrink-0"><i class="bi bi-binoculars" style="color: #15bfbc;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Magni Dolores</a></h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon flex-shrink-0"><i class="bi bi-brightness-high" style="color: #f5cf13;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Nemo Enim</a></h4>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week" style="color: #1335f5;"></i></div>
+                    <div>
+                        <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
+                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+            </div>
+
+        </div>
+    </section><!-- End Our Services Section -->
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+        <div class="container" data-aos="fade-up">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3>Ut fugiat aliquam aut non</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <a class="cta-btn" href="#">Call To Action</a>
                 </div>
             </div>
+
+        </div>
+    </section><!-- End Call To Action Section -->
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+        <div class="container" data-aos="fade-up">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="WEATHER" data-theme="original">NEW YORK WEATHER</a>
+            <script>
+                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
         </div>
 
-        <div class="fullwidth-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="section-title">Application features</h2>
-                        <ul class="arrow-feature">
-                            <li>
-                                <h3>Natus error sit voluptatem accusantium</h3>
-                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
-                            </li>
-                            <li>
-                                <h3>Natus error sit voluptatem accusantium</h3>
-                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
-                            </li>
-                            <li>
-                                <h3>Natus error sit voluptatem accusantium</h3>
-                                <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="section-title">Weather analyssis</h2>
-                        <ul class="arrow-list">
-                            <li><a href="#">Accusantium doloremque laudantium rem aperiam</a></li>
-                            <li><a href="#">Eaque ipsa quae ab illo inventore veritatis quasi</a></li>
-                            <li><a href="#">Architecto beatae vitae dicta sunt explicabo</a></li>
-                            <li><a href="#">Nemo enim ipsam voluptatem quia voluptas</a></li>
-                            <li><a href="#">Aspernatur aut odit aut fugit, sed quia consequuntur</a></li>
-                            <li><a href="#">Magni dolores eos qui ratione voluptatem sequi</a></li>
-                            <li><a href="#">Neque porro quisquam est qui dolorem ipsum quia</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="section-title">Awesome Photos</h2>
-                        <div class="photo-grid">
-                            <a href="#"><img src="images/thumb-1.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-2.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-3.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-4.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-5.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-6.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-7.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-8.jpg" alt="#"></a>
-                            <a href="#"><img src="images/thumb-9.jpg" alt="#"></a>
+    </section><!-- End Features Section -->
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-posts" class="recent-posts">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Recent Blog Posts</h2>
+
+            </div>
+
+            <div class="row gy-5">
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="post-box">
+                        <div class="post-img"><img src="~/images/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+                        <div class="meta">
+                            <span class="post-date">Tue, December 12</span>
+                            <span class="post-author"> / Julia Parker</span>
                         </div>
+                        <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
+                        <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi qui magni est...</p>
+                        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main> <!-- .main-content -->
 
-</div>
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="post-box">
+                        <div class="post-img"><img src="~/images/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+                        <div class="meta">
+                            <span class="post-date">Fri, September 05</span>
+                            <span class="post-author"> / Mario Douglas</span>
+                        </div>
+                        <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
+                        <p>Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id. Odit quia ab eum assumenda. Quisquam omnis doloribus...</p>
+                        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="post-box">
+                        <div class="post-img"><img src="~/images/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+                        <div class="meta">
+                            <span class="post-date">Tue, July 27</span>
+                            <span class="post-author"> / Lisa Hunter</span>
+                        </div>
+                        <h3 class="post-title">Quia assumenda est et veritati</h3>
+                        <p>Quia nam eaque omnis explicabo similique eum quaerat similique laboriosam. Quis omnis repellat sed quae consectetur magnam...</p>
+                        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="post-box">
+                        <div class="post-img"><img src="~/images/blog/blog-4.jpg" class="img-fluid" alt=""></div>
+                        <div class="meta">
+                            <span class="post-date">Tue, Sep 16</span>
+                            <span class="post-author"> / Mario Douglas</span>
+                        </div>
+                        <h3 class="post-title">Pariatur quia facilis similique deleniti</h3>
+                        <p>Et consequatur eveniet nam voluptas commodi cumque ea est ex. Aut quis omnis sint ipsum earum quia eligendi...</p>
+                        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Recent Blog Posts Section -->
+
+</main>
+<!-- End #main -->
+
+<style>
+
+    /* RESET STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    input {
+        -webkit-appearance: none;
+    }
+
+    button,
+    input {
+        border: none;
+        background: none;
+        outline: none;
+        color: inherit;
+    }
+
+
+    ul {
+        list-style: none;
+    }
+
+</style>

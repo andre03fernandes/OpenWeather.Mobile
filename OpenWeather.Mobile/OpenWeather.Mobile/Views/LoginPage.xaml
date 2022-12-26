@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="OpenWeather.Mobile.Views.LoginPage">
+    
+    <Grid BackgroundColor="#1b2f45">
+        <StackLayout Orientation="Horizontal"
+             HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+            <Frame BackgroundColor="Transparent" HeightRequest="300" HasShadow="True" Padding="0" Margin="20,0,20,20">
+                <StackLayout>
+                    <StackLayout Padding="0" Margin="15,10">
+                        <Image Source="logo.png" WidthRequest="100" HeightRequest="50"></Image>
+
+                        <Frame BorderColor="White" BackgroundColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                    <Image Source="ic_user" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="White" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" BorderColor="White" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                    <Image Source="ic_key" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry Text="{Binding Password}" PlaceholderColor="White" Placeholder="Password" IsPassword="True" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <StackLayout  Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="White" />
+                            <Label Text="Remember me" TextColor="White" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                            <Button Text="CREATE ACCOUNT" Command="{Binding DontHaveAnAccountCommand}" TextColor="#ea6d4a" BackgroundColor="Transparent" FontAttributes="Bold" HorizontalOptions="EndAndExpand" FontSize="Small" />
+
+                        </StackLayout>
+                        <StackLayout  Orientation="Horizontal" >
+                            <Button Text="LOG IN" Command="{Binding LoginCommand}" BackgroundColor="#ea6d4a" TextColor="White" CornerRadius="30" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

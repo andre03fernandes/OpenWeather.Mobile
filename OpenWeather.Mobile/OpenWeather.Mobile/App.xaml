@@ -6,6 +6,9 @@
   <Application.Resources>
 
     <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <x:String x:Key="UrlAPI">api.openweathermap.org</x:String>
+        </ResourceDictionary>
 
-  </Application.Resources>
+    </Application.Resources>
 </prism:PrismApplication>

@@ -23,7 +23,7 @@ namespace OpenWeather.Mobile
 
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            await NavigationService.NavigateAsync("NavigationPage/CitiesPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -33,6 +33,10 @@ namespace OpenWeather.Mobile
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<RegisterPage, RegisterPageViewModel>();
+            containerRegistry.RegisterForNavigation<RegisterConfirmationPage, RegisterConfirmationPageViewModel>();
+            containerRegistry.RegisterForNavigation<CitiesPage, CitiesPageViewModel>();
+            containerRegistry.RegisterForNavigation<CityDetailPage, CityDetailPageViewModel>();
         }
     }
 }

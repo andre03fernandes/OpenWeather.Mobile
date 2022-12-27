@@ -13,6 +13,7 @@ namespace OpenWeather.Mobile.ViewModels
         private string _password;
         private bool _isEnabled;
         private DelegateCommand _loginCommand;
+        private DelegateCommand _donthaveanaccountCommand;
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
 
@@ -22,6 +23,8 @@ namespace OpenWeather.Mobile.ViewModels
             _navigationService = navigationService;
             _apiService = apiService;
         }
+
+        public DelegateCommand DontHaveAnAccountCommand => _donthaveanaccountCommand ?? (_donthaveanaccountCommand = new DelegateCommand((DontHaveAnAccount)));
 
         public DelegateCommand LoginCommand => _loginCommand ?? (_loginCommand = new DelegateCommand(Login));
 
@@ -36,6 +39,11 @@ namespace OpenWeather.Mobile.ViewModels
         {
             get => _isEnabled;
             set => SetProperty(ref _isEnabled, value);
+        }
+
+        private async void DontHaveAnAccount()
+        {
+            await NavigationService.NavigateAsync($"/NavigationPage/{nameof(RegisterPage)}");
         }
 
         private async void Login()

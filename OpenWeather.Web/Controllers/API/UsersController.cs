@@ -45,8 +45,8 @@ namespace OpenWeather.Controllers.API
         {
             var newuser = new User
             {
-                FirstName = "firstname",
-                LastName = "lastname",
+                FirstName = user.FirstName,
+                LastName = user.LastName,
                 UserName = user.Email,
                 Email = user.Email
             };

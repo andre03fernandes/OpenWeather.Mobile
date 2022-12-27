@@ -1,13 +1,15 @@
-﻿namespace OpenWeather.Web.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OpenWeather.Mobile.Models
 {
-    public class RegisterNewUserMobileViewModel
+    public class RegisterResponse
     {
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
         public string Email { get; set; }
-
         public string Password { get; set; }
+        public string Confirm { get; set; }
     }
 }

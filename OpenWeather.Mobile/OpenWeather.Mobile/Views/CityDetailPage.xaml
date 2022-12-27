@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="OpenWeather.Mobile.Views.CityDetailPage"
+             Title="{Binding Title}">
+
+    <Grid VerticalOptions="FillAndExpand"  BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="overlay.png" Aspect="Fill" HeightRequest="300" VerticalOptions="StartAndExpand"/>
+        <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,50">
+            <Label Text="{Binding City.Country.EnglishName}" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+            <Label Text="{Binding City.EnglishName}" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Margin="0,20" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="{Binding City.Image}" WidthRequest="50" HeightRequest="50" VerticalOptions="Center"/>
+                <Label Text="{Binding City.Temperature.Metric.Value}" TextColor="White" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label Text="°C" TextColor="White" FontSize="34" VerticalOptions="Center"/>
+            </StackLayout>
+            <Label Text="{Binding City.WeatherText}" TextColor="White" FontSize="16" HorizontalOptions="Center"/>
+            <Label Text="{Binding City.TimeZone.Name}" TextColor="White" FontSize="14" HorizontalOptions="Center"/>
+            <Label Text="{Binding City.LocalObservationDateTime}" TextColor="White" FontSize="12" HorizontalOptions="Center"/>
+        </StackLayout>
+        <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,-40,20,0" Padding="0" HeightRequest="120" VerticalOptions="Start">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="humidity.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding City.Temperature.Imperial.Value, StringFormat='{0:N0}%'}" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Humidity" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="wind.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding City.Temperature.Imperial.UnitType, StringFormat='{0:N0}km/h'}" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Wind" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="pressure.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding City.GeoPosition.Elevation.Metric.UnitType, StringFormat='{0:N0}°'}" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Feeks Like" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="3" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="cloudiness.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding City.GeoPosition.Latitude}" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Latitude" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Frame>
+        <StackLayout Grid.Row="2" BackgroundColor="Transparent" Orientation="Horizontal" Margin="10" HorizontalOptions="End">
+        </StackLayout>
+
+        <Grid Grid.Row="3" BackgroundColor="White">
+
+            <Image Grid.Column="1" Grid.Row="0" Source="ic_coordinate" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Label Grid.Row="1" TextColor="Black" Grid.Column="0" Text="Latitude" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="2" TextColor="Black" Grid.Column="0" Text="{Binding City.GeoPosition.Latitude}" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+
+            <Label Grid.Row="1" TextColor="Black" Grid.Column="1" Text="Longitude" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="2" TextColor="Black" Grid.Column="1" Text="{Binding City.GeoPosition.Longitude}" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+
+            <Label Grid.Row="1" TextColor="Black" Grid.Column="2" Text="Elevation" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="2" TextColor="Black" Grid.Column="2" Text="{Binding City.GeoPosition.Elevation.Metric.Value}" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
